@@ -1,0 +1,116 @@
+@import "normalize.css";
+
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,700');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Cabin', sans-serif;
+
+}
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 0.1fr 1fr 0.5fr;
+  grid-template-areas: "header header header" "header-bilde header-bilde header-bilde" "main-content main-content main-content" "footer footer footer";
+}
+
+body{
+    background-color: #282a29;
+}
+
+.header { 
+    grid-area: header; 
+    text-align: right;
+    background-color: white;
+}
+
+.header-bilde { 
+    grid-area: header-bilde; 
+    width: 100%;
+    height: auto;
+    background-color: #282a29;
+}
+
+.main-content { 
+    grid-area: main-content; 
+    top: 0;
+    background-color: #282a29;
+    color: white;
+}
+
+.footer { 
+    grid-area: footer; 
+    background-color: #1f2120;
+    color: white;
+    text-align: center;
+    padding: 4em;
+    margin-top: 5em;
+    line-height: 2em;
+}
+
+.footer h3 {
+    font-size: 1.5em;
+}
+
+#logo{
+    width: 8em;
+    height: auto;
+    float: left;
+    margin: 2em;
+}
+
+ul li{
+    display: inline-block;
+    padding: 2.7em;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #282a29;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.quotes {
+    text-align: left;
+}
+
+#artikkel {
+    width: 50%;
+    text-align: center;
+    margin: 4em 25%;
+    line-height: 2em;
+    font-size: 1.3em;
+}
+
+#artikkel h2 {
+    font-size: 2em;
+}
+
+
+#cc{
+    width: 8%;
+    height: auto;
+    margin: 0 46%;
+}
+
+article a {
+    font-size: 1em;
+    color: white;
+    text-decoration: underline
+}
+
+article a:visited {
+    color: dimgrey;
+    text-decoration: underline
+}
