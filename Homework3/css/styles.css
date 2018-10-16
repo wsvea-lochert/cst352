@@ -1,0 +1,80 @@
+input{
+    color: white !important;
+}
+
+/* label color */
+   .input-field label {
+     color: #FFFFFF;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #FFFFFF;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #FFFFFF;
+     box-shadow: 0 1px 0 0 #000;
+     color: #FFFFFF;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #FFFFFF;
+     box-shadow: 0 1px 0 0 #000;
+     color: white;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #FFFFFF;
+     box-shadow: 0 1px 0 0 #000;
+     color: #FFFFFF;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     border-bottom: 1px solid #FFFFFF;
+     color: #FFFFFF;
+   }
+   
+   #submitform{
+    margin-top: 10rem;
+    padding:3em;
+}
+
+    body{
+        background-color:black;
+        background-position: center;
+    }
+      
+    header{
+        background: url(../img/moon.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 1000px;
+        
+    }
+ 
+    #logo{
+        max-height: 70px;
+    }
+ 
+    @media screen and (max-width: 690px){
+        header{
+        min-height: 500px;
+        }
+    }
+    #logo{
+        max-height: 70px;
+    }
+
+    #textbox{
+    background: linear-gradient(
+    rgba(200, 200, 200, 0.2), 
+    rgba(200, 200, 200, 0.1)),
+    url("../img/bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    color:white;
+    margin-top: 12em;
+    padding-bottom: 4em;
+    
+}
