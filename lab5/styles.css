@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+    line-height: 1.3em;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    font-size: 2em;
+    font-style: italic;
+}
+
+.container{
+    margin: 5% 25%;
+    text-align:center;
+}
+
+iframe{
+    text-align: left;
+    margin: 0;
+    border-style: solid;
+    border-width: 1.5px;
+    padding: 1em;
+}
+
+img{
+    width: 400px;
+    height: auto;
+}
+
+.quote{
+    font-size: 2em;
+}
