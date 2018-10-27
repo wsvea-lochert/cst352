@@ -1,1 +1,2 @@
-# cst352
+# cst352 <br>
+ Web Scripting with Professor Miguel Lara, PhD
