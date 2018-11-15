@@ -2,16 +2,21 @@
 
 body{
     font-family: 'Nunito', sans-serif;
-    text-align: center;
-    background-color: #f1f1f1;
+    text-align:center;
+    background-image: url("../img/numbers_bg.jpg");
+    background-size: cover;
 }
 
-#directions{
-    margin-top: 300px;
-    
+
+.jumbotron {
+    background-color:#edf2f9;
 }
 
-.guessSubmit{
-    margin: 30px;
-    padding: 30px;
+#directions {
+    background-color:#edf2f9;
+    font-size: 2em;    
+    width:900px;
+    height:550px;
+    margin:0 auto;
+    border-radius:20px;
 }
