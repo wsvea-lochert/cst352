@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Icon pack -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    
+</head>
+<body class="blue-grey lighten-5">
+    <div class="container">
+        <div class="col left">
+            <div class="row s12 m12 l12">
+                <h2>Car quiz!</h2>
+                <hr>
+                <form id="form">
+                    <!-- Multiple choise -->
+                    <h5>M3 is a car produced by?</h5>
+                    <p>
+                        <label>
+                            <input id="audi" name="group1" type="radio"/>
+                            <span class="black-text">Audi</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input id="bmw" name="group1" type="radio" />
+                            <span class="black-text">BMW</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input id="ferrari" name="group1" type="radio" />
+                            <span class="black-text">Ferrari</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input id="vw" name="group1" type="radio" />
+                            <span class="black-text">VW</span>
+                        </label>
+                    </p>
+                    <span id="multRadio" class="green-text"></span>
+                    <hr>
+                    
+                    <!-- Dropdown menue -->
+                    <div class="input-field col s12">
+                        <h5>What engine did the E60 M5?</h5>
+                        <select id="dropdown">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">V10</option>
+                            <option value="2">V8</option>
+                            <option value="3">V6</option>
+                        </select>
+                        <span id="dropdownGrade" class="black-text"> </span>
+                    </div>
+                    
+                    <!-- Finish the sentence -->
+                    <div class="row">
+                      <div class="col s12"><hr>
+                          <h5>Fill in the blank</h5>
+                        Tesla is an 
+                        <div class="input-field inline">
+                          <input id="fillInTheBlank" type="text" class="validate">
+                          <label for="fillInTheBlank"> Fill in the blank here :-)</label>
+                        </div>
+                        car company. <br>
+                        <span id="fillInAwnser"></span>
+                      </div>
+                      
+                    </div> <hr>
+
+                    <!-- Multiple choice checkboxses -->
+                    <div class="checkboxes">
+                        <h5>What models are produced by BMW?</h5>
+                        <p>
+                            <label>
+                                <input id="m5" type="checkbox"/>
+                                <span class="black-text">M5</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input id="a3" type="checkbox" />
+                                <span class="black-text">A3</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input id="malibu" type="checkbox" />
+                                <span class="black-text">Malibu</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input id="x5" type="checkbox" />
+                                <span class="black-text">x5</span>
+                            </label>
+                        </p>
+                        <span class="green-text" id="checkboxCorrectAwnser"></span>
+                        <span class="red-text" id="checkboxWrongAwnser"></span>
+                    </div>
+                    <hr>
+
+                    <!-- Number of cylinders -->
+                    <h5>How maney cylinders does a E46 M3 have? (Enter a number)</h5>
+                    <input id="cylindersInput" placeholder="Number here" type="number" name="quantity" min="1" max="12">
+                    <span id="cylindersAwnserC" class="green-text"></span>
+                    <span id="cylindersAwnserF" class="red-text"></span>
+                    <hr>
+                    <!-- true or false -->
+
+                    <h5>True or false?</h5>
+                      <!-- Switch -->
+                        <div class="switch">
+                            <h6>Does BMW produce electric cars?</h6>
+                            <label>
+                                False
+                                <input id="switch1" type="checkbox">
+                                <span class="lever"></span>
+                                True
+                            </label>
+                            <span class="green-text" id="s1T"></span>
+                            <span class="red-text" id="s1F"></span>
+
+                            <br> <br> <h6>Is there a norwegian car producer?</h6>
+                            <label>
+                                False
+                                <input id="switch2" type="checkbox">
+                                <span class="lever"></span>
+                                True
+                            </label>
+                            <span class="green-text" id="s2T"></span>
+                            <span class="red-text" id="s2F"></span>
+                        </div>
+                    <!-- Form end -->
+                    <br> <h4 id="score">Score: </h4> <br>
+                    <h4 class="green-text" id="grats"></h4>
+                    
+                    <div class="center" id="btnBox">
+                        <!-- TODO: disable button if all questions was submitted -->
+                        <button class="waves-effect waves-light btn green" id="btnSubmit">Sumbit awnsers</button>
+
+                        <!-- TODO: enable button if all awnsers was submitted -->
+                        <button onclick="reload()" class="waves-effect waves-light btn indigo disabled" id="btnTryAgien">Try agien?</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="js/main.js"></script>
+</html>
