@@ -17,12 +17,9 @@
 <body>
     <header>
         <!-- navbar -->
-        <nav class="nav justify-content-end">
-             <a class="nav-link active" id="link1" href="index.html"><i class="fas fa-home"></i> Home</a>
-             <a class="nav-link" id="link2" href="#"><i class="fas fa-heart"></i> Favorites</a>
-             <button type="button" class="btn btn-outline-primary navLinker"><i class="fas fa-sign-in-alt"></i> <strong>Log in</strong></button>
-        </nav>
-
+        <?php
+        include "inc/header.php";
+        ?>
     </header>
 
     
@@ -55,6 +52,18 @@
                                             <a class="dropdown-item" href="#">Something else here</a>
                                         </div>
                                     </div>
+                                    <br>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Select car model
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
 
                                 <div class="col-sm-6">
@@ -91,7 +100,7 @@
         <div class="row">
             <!-- card 1 row 1 -->
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="bmw.JPG" alt="Card image cap">
+                <img class="card-img-top" src="img/bmw.JPG" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">BMW 520D</h5>
                     <hr>
@@ -108,7 +117,7 @@
 
             <!-- card 2 row 1-->
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="bmw.JPG" alt="Card image cap">
+                <img class="card-img-top" src="img/bmw.JPG" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">BMW 520D</h5>
                     <hr>
@@ -125,7 +134,7 @@
 
             <!-- card 3 row 1-->
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="bmw.JPG" alt="Card image cap">
+                <img class="card-img-top" src="img/bmw.JPG" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">BMW 520D</h5>
                     <hr>
@@ -163,15 +172,15 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <!-- first slider -->
-                                <img class="d-block w-100" src="bmw.JPG" alt="First slide">
+                                <img class="d-block w-100" src="img/bmw.JPG" alt="First slide">
                             </div>
                             <!-- second slider-->
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="bmw2.JPG" alt="Second slide">
+                                <img class="d-block w-100" src="img/bmw2.JPG" alt="Second slide">
                             </div>
                             <!-- third slider -->
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="bmw3.JPG" alt="Third slide">
+                                <img class="d-block w-100" src="img/bmw3.JPG" alt="Third slide">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -224,19 +233,9 @@
         </div>
     </div>
 
-    <footer class="fixed-bottom">
-
-        <div class="row">
-            <div class="col-sm-6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis aliquam ex, eu mollis elit sollicitudin vitae. Ut suscipit quis massa eu maximus. Duis ac aliquam mi.</p>
-            </div>
-
-            <div class="col-sm-6 justify-content-end">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis aliquam ex, eu mollis elit sollicitudin vitae. Ut suscipit quis massa eu maximus. Duis ac aliquam mi.</p>
-            </div>
-        </div>
-        
-    </footer>
+    <?php
+        include "inc/footer.php";
+    ?>
 
 </body>
 </html>

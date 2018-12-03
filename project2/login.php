@@ -15,6 +15,27 @@
     <title>login</title>
 </head>
 <body>
+    <header>
+        <!-- navbar -->
+        <?php
+            include "inc/header.php";
+        ?>
+    </header>
+    
+    <!-- maincontent -->
+    
+    <div class="container">
+        
+        
+    </div>
+    
+    
+    <!--footer-->
+    
+    <?php
+        include "inc/footer.php";
+    ?>
+    
     
 </body>
 </html>

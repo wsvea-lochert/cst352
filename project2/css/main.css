@@ -49,6 +49,18 @@
     border-color: #FFC75F;
 }
 
+#loginbtn{
+    background-color: transparent;
+    border-color: #FFC75F;
+    color: #FFC75F;
+}
+
+#loginbtn:hover{
+    color: #845EC2;
+    background-color: #FFC75F;
+    border-color: #FFC75F;
+}
+
 
 
 ::selection {
