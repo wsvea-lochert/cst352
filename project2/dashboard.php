@@ -16,16 +16,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <title>login</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="css/main.css">
     
 </head>
 <body>
     <header>
         <!-- navbar -->
-        <?php
-            include "inc/header.php";
-        ?>
+        <nav class="nav justify-content-end">
+            
+            <a class="btn btn-primary" href="inc/logout.php" id="logoutbtn" role="button"><i class="fas fa-sign-in-alt"></i> <strong>sign out</strong></a>
+        </nav>
     </header>
     
     

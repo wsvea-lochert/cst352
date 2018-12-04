@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,21 +36,20 @@
         
             <div class="col-sm-6" id="loginbox">
               <h3>Admin login</h3>
-                <form>
-                  <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="username" class="form-control" id="username"  placeholder="Enter username">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
+                
+                
+                <form action="inc/loginProsses.php" method="post">
                     
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password">
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    Username: <input placeholder="Username" class="form-control" type="text" name="username"/> <br>
+                    Password: <input placeholder="Password" class="form-control" type="password" name="password"/> <br>
+                              <input type="submit" class="btn btn-primary" value="Login"/>
                 </form>
                 
+                <span> 
+            <?php 
+                echo $_SESSION['error'];
+            ?> 
+        </span>
             </div>
             <div class="col-sm-3"></div>
         </div>
