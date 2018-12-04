@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,36 +28,37 @@
         ?>
     </header>
     
+    
+    
     <!-- maincontent -->
     
     <div class="container ">
-        <div class="row">
-            <div class="col-sm-3"></div>
+        <h1 class="headerText">Dashboard</h1>
         
-            <div class="col-sm-6" id="loginbox">
-              <h3>Admin login</h3>
-                <form>
-                  <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="username" class="form-control" id="username"  placeholder="Enter username">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
+        <?php
+            //TODO: add logic for filter then display all records as default
+            include "inc/filter.php";
+        ?>
+    
+        <div class="row">
+            <!-- Modal -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <!-- TODO: get information from database -->
+                    <h5 class="card-title">Car title</h5>
                     
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password">
-                    </div>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form>
-                
+                    <!-- TODO: make delete and edit function-->
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-trash-alt"></i> Delete</button> 
+                    <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button>
+                </div>
             </div>
-            <div class="col-sm-3"></div>
+            
+            
         </div>
         
-        
     </div>
-    
     
     
     <!--footer-->
