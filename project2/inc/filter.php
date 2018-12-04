@@ -39,7 +39,7 @@
                                     </div>
                                     <br>
                                     <!-- TODO: add colapse when submitt is clicked and filter the search-->
-                                    <button type="submit" class="btn btn-primary">Apply filters</button>
+                                    
                                 </div>
 
                                 <div class="col-sm-6">
@@ -57,7 +57,8 @@
                                         </div>
                                         <input type="text" aria-label="fromPrice" class="form-control">
                                         <input type="text" aria-label="toPrice" class="form-control">
-                                    </div>
+                                    </div> <br>
+                                    <button type="submit" class="btn btn-primary">Apply filters</button>
                                 </div>
                             </div>
                         </div>
