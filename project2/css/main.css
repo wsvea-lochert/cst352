@@ -5,26 +5,47 @@
 }
 
 .card{
-    color: #845EC2;
+    /*color: #845EC2;*/
+    color: #374955;
     margin: auto;
     margin-top: 1em;
+    margin-bottom: 2em;
 }
+
+.card p {
+    color: black;
+}
+
 
 /*--------------------------*/
 
 
 /* NAVBAR */
 .nav{
-    background-color: #845EC2;
+    /*background-color: #845EC2;*/
+    /*background-color: #85144b;*/
+    /*background-color: #2DB6F0;*/
+    background-color: #374955;
     padding: 1em;
+
+    
 }
 
 .nav a {
     color: #f1f1f1;
+    display: inline-block;
+    float: right;
+    
 }
 
 .nav a:hover{
     color: #FFF;
+}
+
+.ccs{
+    width: 65em;
+    margin: 0 auto;
+    float: right;
 }
 
 /*--------------------------*/
@@ -33,8 +54,16 @@
 
 /*BUTTONS */
 .btn-primary{
-    background-color: #FF9671;
-    border-color: #FF9671;
+   /* background-color: #FF9671;
+    border-color: #FF9671;*/
+    
+   /* background-color: #85144b;
+    background-color: #2DB6F0;*/
+    
+    background-color: #FF851B;
+    border-color: transparent;
+
+    
 }
 
 .btn-primary:hover{
@@ -51,31 +80,56 @@
 .btn-outline-primary:hover{
     color: #845EC2;
     background-color: #FFC75F;
-    border-color: #FFC75F;
+    /*border-color: #FFC75F;*/
 }
 
 #loginbtn{
     background-color: transparent;
-    border-color: #FFC75F;
-    color: #FFC75F;
+    /*border-color: #FFC75F;*/
+    /*color: #FFC75F;*/
+    color: #FF851B;
+    border-color: #FF851B;
 }
 
 #loginbtn:hover{
-    color: #845EC2;
-    background-color: #FFC75F;
-    border-color: #FFC75F;
+    color: #374955;
+    background-color: #FF851B;
+    
+    border-color: #FF851B;
 }
 
 #logoutbtn{
     background-color: transparent;
-    border-color: #FFC75F;
-    color: #FFC75F;
+    color: #FF851B;
+    border-color: #FF851B;
 }
 
 #logoutbtn:hover{
-    color: #845EC2;
-    background-color: #FFC75F;
-    border-color: #FFC75F;
+    color: #374955;
+    background-color: #FF851B;
+    
+    border-color: #FF851B;
+}
+
+.favBtn{
+    margin-left: 1em;
+    background-color: #FF6F91;
+}
+
+.favBtn:hover{
+    background-color: #FD4747;
+    border-color: #FD4747;
+}
+
+#btnAddRecord{
+    color: #FF851B;
+    border-color: #FF851B;
+}
+
+#btnAddRecord:hover{
+    color: #FFF;
+    background-color: #FF851B;
+    
 }
 
 /*--------------------------*/
@@ -93,7 +147,7 @@ footer{
 div#loginbox{
     background-color: #f1f1f1;
     margin-top: 4em;
-    color: #845EC2;
+    color: #374955;
     padding: 3em;
     
     border-radius: 10px;
@@ -115,18 +169,28 @@ div#loginbox{
 
 /*MODAL STYLE MAINLY TEXT COLOR*/
 .modal{
-    color:#845EC2;
+    color:#374955;
 }
 
 /*--------------------------*/
 
 #favoriteHeader{
     margin: 1em;
-    color:#845EC2;
+    color:#374955;
     text-align-last: center;
 }
 
 .headerText{
     margin: 1em;
-    color:#845EC2;
+    margin-left:0;
+    color:#374955;
 }
+
+.errorText{
+    margin: auto;
+    color:#D71C2D;
+    text-align: center;
+    
+}
+
+

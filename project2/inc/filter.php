@@ -20,10 +20,10 @@
                                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Select car maker
                                         </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Action</a>
+                                        <div class="dropdown-menu" id="carMakersDrop" aria-labelledby="dropdownMenuButton">
+                                            <!--<a class="dropdown-item" href="#">Action</a>
                                             <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>-->
                                         </div>
                                     </div>
                                     <br>
@@ -45,20 +45,20 @@
                                 <div class="col-sm-6">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text">Milage from and to: </span>
+                                            <span class="input-group-text">Milage: </span>
                                         </div>
-                                        <input type="text" aria-label="fromMilage" class="form-control">
-                                        <input type="text" aria-label="toMilage" class="form-control">
+                                        <input type="text" placeholder="From" aria-label="fromMilage" class="form-control">
+                                        <input type="text" placeholder="To" aria-label="toMilage" class="form-control">
                                     </div>
                                     <br>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text">Price from and to: </span>
+                                            <span class="input-group-text">Price</span>
                                         </div>
-                                        <input type="text" aria-label="fromPrice" class="form-control">
-                                        <input type="text" aria-label="toPrice" class="form-control">
+                                        <input type="text" id="fromPrice" placeholder="From" aria-label="fromPrice" class="form-control">
+                                        <input type="text" id="toPrice" placeholder="To" aria-label="toPrice" class="form-control">
                                     </div> <br>
-                                    <button type="submit" class="btn btn-primary">Apply filters</button>
+                                    <button type="submit" id="filterCarsBtn" class="btn btn-primary">Apply filters</button>
                                 </div>
                             </div>
                         </div>
