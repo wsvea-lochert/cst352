@@ -20,7 +20,7 @@
                                         <!--<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Select car maker
                                         </button>-->
-                                        <select id="carMakersDrop" class="btn btn-secondary dropdown-toggle" value="BMW">
+                                        <select id="carMakersDrop" class="btn btn-secondary dropdown-toggle">
                                             
                                         </select>
                                     </div>

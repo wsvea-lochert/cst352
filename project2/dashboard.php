@@ -57,16 +57,12 @@
                         echo "<hr>";
                         echo "<p class='card-text'>" . $car["description"] . "</p>";
                         echo "<a href='#' class='carLink btn btn-primary' id='". $car["carId"]. "' data-toggle='modal' data-target='#exampleModal'><i class='fas fa-edit'></i> Edit</a>" . "   ";
-                         echo "<a href='#' class='btn btn-secondary' name='favBtn' id='". $car["carId"]. "'><i class='fas fa-trash-alt'></i> Delete</a>";
+                         echo "<a href='#' class='btn btn-secondary deleteBtn' name='favBtn' id='". $car["carId"]. "'><i class='fas fa-trash-alt'></i> Delete</a>";
                         //<button id="addToFavBtn" type="button" class="btn btn-primary" onclick=""> add to favorites</button>
                     echo"</div>";
                 echo"</div>";
             }
         ?>
-            
-            
-            
-            
         </div>
         
     </div>

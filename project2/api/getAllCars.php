@@ -30,7 +30,6 @@ function displayAllCars(){
         if ($toMilage == null) {
             $toMilage = 999999999;
         }
-        
     
              $sql = "SELECT *
                       FROM car
@@ -48,17 +47,15 @@ function displayAllCars(){
         }
         
         
-    
     $stmt = $dbConn->prepare($sql);
     $stmt->execute();
     $cars = $stmt->fetchAll(PDO::FETCH_ASSOC); 
     
     if ($cars == null ) {
     echo '<div class="jumbotron">
-  <h1 class="display-4">No cars matching your criteria!</h1>
-  <p class="lead">You can reset by clicking the reset button in the filter menu</p>
-</div>';
-
+            <h1 class="display-4">No cars matching your criteria!</h1>
+            <p class="lead">You can reset by clicking the reset button in the filter menu</p>
+        </div>';
     }
     
     return $cars;

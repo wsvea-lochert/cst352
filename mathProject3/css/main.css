@@ -1,0 +1,59 @@
+*{
+    color: #001f3f;
+}
+
+
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #001f3f;
+}
+
+color-text{
+    color: #001f3f!important;
+}
+.chart{
+    max-width: 500px;
+    max-height: 500px;
+    margin: auto;
+}
+
+#btnSubmit{
+    color: #FFF;
+    Background-color:#0074D9;
+}
+
+#btnReset{
+    background-color:#001f3f;
+}
+
+#navbar{
+    background-color:#001f3f;
+    
+}
+
+#h1{
+    color:#7FDBFF !important;
+}
+
+.footer-text{
+    color:#7FDBFF !important;
+}
+
+#mainfooter {
+    background-color: #001f3f;
+}
+#cpyrg{
+
+    background-color: #0074D9 !important;
+}
+
+#modalBtn{
+    color: #FFF;
+    background-color: #0074D9;
+    
+}
+#modalBtn2{
+    color: #FFF;
+    background-color: #0074D9;
+    
+}

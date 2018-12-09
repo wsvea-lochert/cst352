@@ -5,9 +5,11 @@ $dbConn = getConnection("cars");
 
 function displayAllCars(){
     global $dbConn;
+    $maker = $_GET['maker'];
     
     $sql = "SELECT DISTINCT maker,model
               FROM car
+              WHERE maker = '". $maker ."'
               ORDER BY model";
     
     $stmt = $dbConn->prepare($sql);

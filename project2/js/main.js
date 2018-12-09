@@ -63,7 +63,7 @@
         });
         
         //SER PÅ DET IMORRA
-        //$("carMakersDrop").change(function() { 
+        $("#carMakersDrop").change(function() { 
             
             $.ajax({
                 
@@ -74,7 +74,7 @@
             data: { "maker":$("#carMakersDrop").val() },
             success: function(data,status) {
                 $("#carModelsDrop").html("");
-                for(var i=0; i<data.length; i++){
+                for(var i = 0; i < data.length; i++){
                     console.log(data[i].model);
                     $("#carModelsDrop").append("<option class='dropdown-item' id='dropdownItems' background-color='black' value='" + data[i].model + "'>"  + data[i].model + "</option>");    
                 }
@@ -85,7 +85,7 @@
                 
             }); //AJAX
             
-        //}); //FUNCTION
+        }); //FUNCTION
         
            
             $(".dropdown-item").click(function(){
@@ -94,30 +94,46 @@
             });
             
             
+            //Den som sletter denne igjen får svi    //buttonclick for deleting cars in admin panel
+            $(".deleteBtn").click(function() {
+                 $(this).html("test");
+            });
+            
+            //Buttonclick for resetting filter
+            $("#resetFilter").click(function() {
+                window.location.href = "index.php";
+            });
             
             
-            
-            
-            
-            
+        
             //Button for filtering
-                //$("#filterCarsBtn").click(function() { //had to change from this for debugging purposes
-             $("#filterCarsBtn").on("click", function() {    //to this
-                //debugging
-                console.log("Filter button clicked successfully")
-                
+            
+            //$("#filterCarsBtn").click(function() { //had to change from this for debugging purposes
+            //to this
+            
+             $("#filterCarsBtn").on("click", function() {    
+
                 var fromPrice = $("#fromPrice").val();
                 var toPrice = $("#toPrice").val();
                 var fromMilage = $("#fromMilage").val();
                 var toMilage = $("#toMilage").val();
                 
-                //debugging
-                console.log("Values are, from: " + fromPrice + ", to " + toPrice + " and " + fromMilage + " + " + toMilage);
-              
                 //Sending the parameters via url, since ajax wont let me. Only works in preview because ajax is asynchronous and content already loaded
                 window.location.href = "index.php?from=" + fromPrice + "&to=" + toPrice + "&fromMilage=" + fromMilage + "&toMilage=" + toMilage;
-               
-               //No longer in use, didn't work, will delete later
+            });
+  });
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   //No longer in use, didn't work, will delete later
                 /* $.ajax({
                     type: 'GET',
                     url: 'index.php?from='+fromPrice+'&to='+toPrice+'', //index.php 
@@ -131,6 +147,3 @@
                     }               
                 });*/
             
-               
-            });
-  });

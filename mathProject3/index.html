@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    
+    
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Math project 3</title>
+
+</head>
+
+
+<body>
+    <nav id="navbar">
+        <div class="nav-wrapper">
+            <div class="container">
+                    <a href="#" id="h1" class="brand-logo left">Monty Hall Problem</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                      <li><a class="waves-effect waves-light modal-trigger btn" href="#modal1" id="modalBtn">Game roules</a></li>
+                      <li><a class="waves-effect waves-light modal-trigger btn disabled" href="#modal2" id="modalBtn2">Game explanation</a></li>
+                    </ul>
+            </div>
+            
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Modal Trigger -->
+        <br>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            
+            
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Monty Hall problem</h4>
+                    <hr>
+                    <p>There are 3 doors behind only 1 there is prize. A contestant chooses one of the 3 doors.
+                        Then the game host opens one of the other two doors behind which there is no prize. 
+                        The contestant then gets to either keep the door they chose, or switch to the other door.
+                        
+                    </p>
+                    <p>What option will have the highest win rate? </p>
+                    <h5>How to simulate:</h5>
+                    <p>Choose how many times you want to simulate the game from the dropdown menu, then click simulate.
+                    When the simulation is done, two graphs will be displaying the win loss ratio</p>
+                    <hr>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+
+            <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <h4>Game explanation</h4>
+                        <hr>
+                        <p>There is clearly a trend here. By running the simulation 1 million, 100 thousand, 10 thousand, a thousand or 100 times we 
+                                get a huge dataset. With this data set we see that almost every time there 
+                                is 2/3 of winning the game by switching, but when we stay with the original
+                                pick we see that there is only 1/3 chance og winning the game.
+                            </p>
+                            <p>
+                                For some it might come as a suprise that it's not a 50/50 chance of winning the game.
+                                When monty opens a door, instead of having a 1/3 chance of winning, you as the player
+                                get another chance, only this time instead of 1/3 chance you have a 1/2 chance in getting
+                                the right door.
+                            </p>
+                        <hr>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+        <div class="row s12 m12 l12">
+            <br> <br>
+            <hr>
+            <div class="input-field col s12">
+                <select id="dropdown">
+                    <option value="" disabled selected>Choose amount of simulations</option>
+                    <option value="100" class="color-text">100</option>
+                    <option value="1000" class="color-text">1000</option>
+                    <option value="10000" class="color-text">10000</option>
+                    <option value="100000" class="color-text">100000</option>
+                    <option value="1000000" class="color-text">1000000</option>
+                </select>
+                <label>Simulations</label>
+                <span id="error" class="red-text"></span>
+            </div>
+            
+            <button id="btnSubmit" class="btn-large waves-effect waves-light right" onclick="playGame()" name="action">Simulate</button> <br>
+            <button id="btnReset" class="btn-large waves-effect waves-light right disabled" name="action" onclick="reset()">Reset</button> <br>
+            
+            
+        </div>
+        
+        <div class="row">
+            <div class="col s12 m12 l6">
+                    <h4 class="center">Stay with original door</h4>
+                    <canvas class="chart" id="stayChart"></canvas>
+                    <h4 id="spanOriginal" class="center"></h4>
+            </div>
+
+            <div class="col s12 m12 l6">
+                    <h4 class="center">Switch door</h4>
+                    <canvas class="chart" id="myChart"></canvas>
+                    <h4 id="spanSwitch" class="center"></h4>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <footer class="page-footer" id="mainfooter">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="footer-text">Monty Hall Problem</h5>
+                  <p class="footer-text text-lighten-4">Monty hall problem simulation made by William Svea-Lochert for Math 170 project 3.</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright" id="cpyrg">
+              <div class="container">
+              <h6 class="footer-text">Made by William Svea-Lochert</h6>
+              
+              </div>
+            </div>
+          </footer>
+</body>
+</html>
