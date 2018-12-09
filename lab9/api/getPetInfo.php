@@ -18,9 +18,6 @@
 
     $petDisp=displayPet();
     
-   
-   // print_r($petDisp);
-   
    //DO NOT DISPLAY ANYTHING OTHER THAN JSON FORMAT IN WEB APIS
     
     echo json_encode($petDisp);

@@ -21,7 +21,7 @@
     <?php
         include "inc/filter.php";
     ?>
-    
+
     <!-- card -->
     <div class="container" id="cardHolder">
         <div class="row">

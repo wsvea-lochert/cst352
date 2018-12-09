@@ -49,12 +49,11 @@
             dataType: "json",
             data: "maker",
             success: function(data,status) {
-                //$("#county").html("<option>"+data[0].county+"</option>");                        
-                //alert(data[0].county);
                 $("#carMakersDrop").html("");
                 for(var i=0; i<data.length; i++){
                     console.log(data[i].maker);
-                    $("#carMakersDrop").append("<a class='dropdown-item' value='" + data[i].maker + "' href='#'>" + data[i].maker + "</a>");    
+                    //$("#carMakersDrop").append("<option class='dropdown-item' id='dropdownItems' background-color='black' >"  + data[i].maker + "</option>");  
+                    $("#carMakersDrop").append("<option class='dropdown-item' id='dropdownItems' background-color='black' value='" + data[i].maker + "'>"  + data[i].maker + "</option>");    
                 }
             },
             complete: function(data,status) { //optional, used for debugging purposes
@@ -62,6 +61,37 @@
             }
                 
         });
+        
+        //SER PÅ DET IMORRA
+        //$("carMakersDrop").change(function() { 
+            
+            $.ajax({
+                
+            type: "GET",
+            url: "api/getAllCarModels.php",
+            dataType: "json",
+            //data: { "state":$("#state").val() }
+            data: { "maker":$("#carMakersDrop").val() },
+            success: function(data,status) {
+                $("#carModelsDrop").html("");
+                for(var i=0; i<data.length; i++){
+                    console.log(data[i].model);
+                    $("#carModelsDrop").append("<option class='dropdown-item' id='dropdownItems' background-color='black' value='" + data[i].model + "'>"  + data[i].model + "</option>");    
+                }
+            },
+            complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+            }
+                
+            }); //AJAX
+            
+        //}); //FUNCTION
+        
+           
+            $(".dropdown-item").click(function(){
+               // $("#dropdownMenuButton").html(this.val());
+                document.querySelector("#dropdownMenuButton").innerHTML = this.value;
+            });
             
             
             
@@ -71,30 +101,36 @@
             
             
             //Button for filtering
-            $("#filterCarsBtn").click(function() {
-                
+                //$("#filterCarsBtn").click(function() { //had to change from this for debugging purposes
+             $("#filterCarsBtn").on("click", function() {    //to this
                 //debugging
                 console.log("Filter button clicked successfully")
                 
                 var fromPrice = $("#fromPrice").val();
                 var toPrice = $("#toPrice").val();
+                var fromMilage = $("#fromMilage").val();
+                var toMilage = $("#toMilage").val();
                 
                 //debugging
-                console.log("Values are, from: " + fromPrice + ", to " + toPrice);
+                console.log("Values are, from: " + fromPrice + ", to " + toPrice + " and " + fromMilage + " + " + toMilage);
               
-                //Sending the parameters via url
-                window.location.href = "index.php?from=" + fromPrice + "&to=" + toPrice;
-
+                //Sending the parameters via url, since ajax wont let me. Only works in preview because ajax is asynchronous and content already loaded
+                window.location.href = "index.php?from=" + fromPrice + "&to=" + toPrice + "&fromMilage=" + fromMilage + "&toMilage=" + toMilage;
+               
+               //No longer in use, didn't work, will delete later
+                /* $.ajax({
+                    type: 'GET',
+                    url: 'index.php?from='+fromPrice+'&to='+toPrice+'', //index.php 
+                    data: { from: fromPrice, to: toPrice },
+                    success: function(response) {
+                        console.log("Sent with success, se nettverkstab" + fromPrice);
+                        console.log(response);
+                    },
+                     error: function(jqXHR, textStatus, errorThrown){
+                       alert(textStatus + errorThrown); // diagnostics
+                    }               
+                });*/
+            
                
             });
-            
-            
-        
-        
-            $(".dropdown-item").click(function(){
-               // $("#dropdownMenuButton").html(this.val());
-                document.querySelector("#dropdownMenuButton").innerHTML = this.value;
-            });
-        
-      
   });
