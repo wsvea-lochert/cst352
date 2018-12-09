@@ -1,5 +1,5 @@
 <?php 
-include '../../sqlConnection.php';
+include 'api/sqlConnection.php';
 $dbConn = getConnection("pets");
 
 function displayAllPets(){
