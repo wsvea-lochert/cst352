@@ -44,7 +44,7 @@
             $cars = displayAllCars();
             //DO NOT CHANGE!!! -W
             foreach($cars as $car){
-                echo "<div class='card' style='width: 18rem;'>";
+                echo "<div class='card' style='width: 23rem;'>";
                     echo "<img class='card-img-top' src='". $car["imgURL"] ."' alt='Card image cap'>";
                     echo "<div class='card-body'>";
                         echo "<h5 class='card-title'>" . $car["maker"] . " " . $car["model"] . "</h5>";
