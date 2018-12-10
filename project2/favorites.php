@@ -33,7 +33,7 @@ session_start();
             else{
             
             foreach($cars as $car){
-                echo "<div class='card' style='width: 23rem;'>";
+                echo "<div class='card' style='width: 22rem;'>";
                     echo "<img class='card-img-top' src='". $car["imgURL"] ."' alt='Card image cap'>";
                     echo "<div class='card-body'>";
                         echo "<h5 class='card-title'>" . $car["maker"] . " " . $car["model"] . "</h5>";
