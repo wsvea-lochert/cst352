@@ -36,7 +36,8 @@
   
   else {
      $_SESSION['error'] = " ";
-    // $_SESSION['adminName'] = $record['firstName'] . " " . $record['lastName'];
+     // jeg trenger den under for delete, si ifra hvis det ødelegger 
+     $_SESSION['adminName'] = $record['firstName'];
      header("location: ../dashboard.php"); //redirects to new site.
   }
  

@@ -35,12 +35,13 @@
             
             //DO NOT CHANGE!!! -W
             foreach($cars as $car){
-                echo "<div class='card' style='width: 18rem;'>";
+                echo "<div class='card' style='width: 23rem;'>";
                     echo "<img class='card-img-top' src='". $car["imgURL"] ."' alt='Card image cap'>";
                     echo "<div class='card-body'>";
                         echo "<h5 class='card-title'>" . $car["maker"] . " " . $car["model"] . "</h5>";
                         echo "<hr>";
-                        echo"<h6>Price: " . "$" .  $car["price"] . "</h6>";
+                        echo"<h6>Price: " . "$" .  $car["price"] . "</h6> <hr>";
+                        echo"<h6>Milage: " .$car["milage"]."km</h6>";
                         echo "<hr>";
                         echo "<p class='card-text'>" . $car["description"] . "</p>";
                         echo "<a href='#' class='carLink btn btn-primary' id='". $car["carId"]. "' data-toggle='modal' data-target='#exampleModal'> Check out this car! </a>" . "   ";

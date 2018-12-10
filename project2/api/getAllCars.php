@@ -7,12 +7,14 @@ $dbConn = getConnection("cars");
 function displayAllCars(){
     global $dbConn;
     
-    if (isset($_GET["from"]) && isset($_GET["to"])/* || isset($_GET["fromMilage"]) && isset($_GET["toMilage"])*/) {
+    if (isset($_GET["from"]) && isset($_GET["to"]) && isset($_GET["carMaker"]) && isset($_GET["carModel"])) {
         
         $from = $_GET["from"];
         $to = $_GET["to"];
         $fromMilage = $_GET["fromMilage"];
         $toMilage = $_GET["toMilage"];
+        $carMaker = $_GET["carMaker"];
+        $carModel = $_GET["carModel"];
         
         
         if ($to == null) {
@@ -30,10 +32,17 @@ function displayAllCars(){
         if ($toMilage == null) {
             $toMilage = 999999999;
         }
+        if($carMaker == null) {
+            $carMaker = 'Subaru';
+        }
+        if($carModel == null) {
+            $carModel = 'BRZ';
+        }
     
              $sql = "SELECT *
                       FROM car
-                      WHERE price BETWEEN ".$from." AND " .$to. "
+                      WHERE maker ='". $carMaker ."' AND model ='".$carModel."' 
+                      AND price BETWEEN ".$from." AND " .$to. "
                       AND milage BETWEEN ".$fromMilage." AND " .$toMilage. "
                       ORDER BY price DESC";
                       

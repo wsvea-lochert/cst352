@@ -21,7 +21,7 @@
                                             Select car maker
                                         </button>-->
                                         <select id="carMakersDrop" class="btn btn-secondary dropdown-toggle">
-                                            
+                                            <option value="" selected disabled hidden>Choose here</option>
                                         </select>
                                     </div>
                                     <br>

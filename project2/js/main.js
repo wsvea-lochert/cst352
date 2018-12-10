@@ -40,9 +40,9 @@
         
         
         
-        //Filter Select Car Maker Fill Select
+        //Dropdown for Car Makers
         
-        $.ajax({
+            $.ajax({
                 
             type: "GET",
             url: "api/getAllCarMakers.php",
@@ -51,7 +51,7 @@
             success: function(data,status) {
                 $("#carMakersDrop").html("");
                 for(var i=0; i<data.length; i++){
-                    console.log(data[i].maker);
+                    //console.log(data[i].maker);
                     //$("#carMakersDrop").append("<option class='dropdown-item' id='dropdownItems' background-color='black' >"  + data[i].maker + "</option>");  
                     $("#carMakersDrop").append("<option class='dropdown-item' id='dropdownItems' background-color='black' value='" + data[i].maker + "'>"  + data[i].maker + "</option>");    
                 }
@@ -60,9 +60,40 @@
                         //alert(status);
             }
                 
+        }); //AJAX
+        
+        $.ajax({
+            type: "GET",
+            url: "api/getCount.php",
+            dataType: "json", 
+            data: "countCars",
+            success: function(data,status) {
+                //alert(data.countCars);
+                console.log(data[0].countCars);
+                $("#countTxt").append(data[0].countCars);
+            }, 
+            complete: function(data,status) {
+                //alert(status);
+            }
         });
         
-        //SER PÅ DET IMORRA
+        $.ajax({
+            type: "GET",
+            url: "api/getAverage.php",
+            dataType: "json", 
+            data: "averagePrice",
+            success: function(data,status) {
+                //alert(data.countCars);
+                console.log(data[0].averagePrice);
+                $("#averageTxt").append("$" + data[0].averagePrice);
+            }, 
+            complete: function(data,status) {
+                //alert(status);
+            }
+        });
+
+        
+        //Dropdown for Car Models
         $("#carMakersDrop").change(function() { 
             
             $.ajax({
@@ -75,7 +106,7 @@
             success: function(data,status) {
                 $("#carModelsDrop").html("");
                 for(var i = 0; i < data.length; i++){
-                    console.log(data[i].model);
+                    //console.log(data[i].model);
                     $("#carModelsDrop").append("<option class='dropdown-item' id='dropdownItems' background-color='black' value='" + data[i].model + "'>"  + data[i].model + "</option>");    
                 }
             },
@@ -96,7 +127,7 @@
             
             //Den som sletter denne igjen får svi    //buttonclick for deleting cars in admin panel
             $(".deleteBtn").click(function() {
-                 $(this).html("test");
+                 //DO NOTHING
             });
             
             //Buttonclick for resetting filter
@@ -117,10 +148,21 @@
                 var toPrice = $("#toPrice").val();
                 var fromMilage = $("#fromMilage").val();
                 var toMilage = $("#toMilage").val();
+                var carMaker = $("#carMakersDrop").val();
+                var carModel = $("#carModelsDrop").val();
                 
                 //Sending the parameters via url, since ajax wont let me. Only works in preview because ajax is asynchronous and content already loaded
-                window.location.href = "index.php?from=" + fromPrice + "&to=" + toPrice + "&fromMilage=" + fromMilage + "&toMilage=" + toMilage;
+                window.location.href = "index.php?from=" + fromPrice + "&to=" + toPrice + 
+                "&fromMilage=" + fromMilage + "&toMilage=" + toMilage + "&carMaker=" + carMaker + "&carModel=" + carModel;
             });
+            
+            $("#btnAddRecord").click(function() {
+                window.location.href = "addCar.php";
+            })
+            
+            $("#btnAggregate").click(function() {
+                window.location.href = "aggregate.php";
+            })
   });
   
   
