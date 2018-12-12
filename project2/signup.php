@@ -31,7 +31,7 @@
                     
                     Username: <input placeholder="Username" class="form-control" type="text" name="username_signup" required/> <br>
                     Password: <input placeholder="Password" class="form-control" type="password" name="password_signup" required id="password1"/> <br>
-                    Confirm:  <input placeholder="Confirm password" class="form-control" type="password" name="password" required id="password2"/> <br>
+                  <!--  Confirm:  <input placeholder="Confirm password" class="form-control" type="password" name="password" required id="password2"/> <br>-->
                               <input type="submit" class="btn btn-primary" value="Sign Up"/>
                 </form>
                 

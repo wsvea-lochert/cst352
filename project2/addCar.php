@@ -82,55 +82,55 @@
         <div class="row">
             <form id="addCarForm">
                 <label class="addCar-label" for="addCarMaker">Car maker:</label>
-                <input type="text" class="form-control" id="addCarMaker" name="addCarMaker" placeholder="Audi, BMW, etc">
+                <input type="text" class="form-control" id="addCarMaker" name="addCarMaker" placeholder="Audi, BMW, etc" required>
                 
                 <label class="addCar-label" for="addCarModel">Car model:</label>
-                <input type="text" class="form-control" id="addCarModel" name="addCarModel" placeholder="A3, 320I, etc">
+                <input type="text" class="form-control" id="addCarModel" name="addCarModel" placeholder="A3, 320I, etc" required>
                 
                 <label class="addCar-label" for="addCarDoors">Doors:</label>
-                <input type="text" class="form-control" id="addCarDoors" name="addCarDoors" placeholder="Amount of doors">
+                <input type="text" class="form-control" id="addCarDoors" name="addCarDoors" placeholder="Amount of doors" required>
                 
                 <label class="addCar-label" for="addCarFuelType">Fuel type:</label>
-                <input type="text" class="form-control" id="addCarFuelType" name="addCarFuelType" placeholder="Diesel, gasolie, etc">
+                <input type="text" class="form-control" id="addCarFuelType" name="addCarFuelType" placeholder="Diesel, gasolie, etc" required>
                 
                 <label class="addCar-label" for="addCarFuelWeight">Weight:</label>
-                <input type="text" class="form-control" id="addCarFuelWeight" name="addCarFuelWeight" placeholder="Weight in KG">
+                <input type="text" class="form-control" id="addCarFuelWeight" name="addCarFuelWeight" placeholder="Weight in KG" required>
                 
                 <label class="addCar-label" for="addCarPower">Horse power:</label>
-                <input type="text" class="form-control" id="addCarPower" name="addCarPower" placeholder="Horse power">
+                <input type="text" class="form-control" id="addCarPower" name="addCarPower" placeholder="Horse power" required>
                 
                 <label class="addCar-label" for="addCarCylinderVolume">Cylinder volume:</label>
-                <input type="text" class="form-control" id="addCarCylinderVolume" name="addCarCylinderVolume" placeholder="Cylinder volume in Liters">
+                <input type="text" class="form-control" id="addCarCylinderVolume" name="addCarCylinderVolume" placeholder="Cylinder volume in Liters" required>
                 
                 <label class="addCar-label" for="addCarMilage">Milage:</label>
-                <input type="text" class="form-control" id="addCarMilage" name="addCarMilage" placeholder="Milage in KM">
+                <input type="text" class="form-control" id="addCarMilage" name="addCarMilage" placeholder="Milage in KM" required>
                 
                 <label class="addCar-label" for="addCarYear">Model year:</label>
-                <input type="text" class="form-control" id="addCarYear" name="addCarYear" placeholder="Model year">
+                <input type="text" class="form-control" id="addCarYear" name="addCarYear" placeholder="Model year" required>
                 
                 <label class="addCar-label" for="addCarOwner">Number of previous owners:</label>
-                <input type="text" class="form-control" id="addCarOwner" name="addCarOwner" placeholder="Number of previous owners">
+                <input type="text" class="form-control" id="addCarOwner" name="addCarOwner" placeholder="Number of previous owners" required>
                 
                 <label class="addCar-label" for="addCarColor">Color:</label>
-                <input type="text" class="form-control" id="addCarColor" name="addCarColor" placeholder="Car color">
+                <input type="text" class="form-control" id="addCarColor" name="addCarColor" placeholder="Car color" required>
                 
                 <label class="addCar-label" for="addCarIntColor">Interior color:</label>
-                <input type="text" class="form-control" id="addCarIntColor" name="addCarIntColor" placeholder="Interior color">
+                <input type="text" class="form-control" id="addCarIntColor" name="addCarIntColor" placeholder="Interior color" required>
         
                 <label class="addCar-label" for="addCarPrice">Price in dollars:</label>
-                <input type="text" class="form-control" id="addCarPrice" name="addCarPrice" placeholder="$">
+                <input type="text" class="form-control" id="addCarPrice" name="addCarPrice" placeholder="$" required>
                 
                 <label class="addCar-label" for="addCarImg1">Image 1</label>
-                <input type="text" class="form-control" id="addCarImg1" name="addCarImg1" placeholder="Image URL">
+                <input type="text" class="form-control" id="addCarImg1" name="addCarImg1" placeholder="Image URL" required>
                 
                 <label class="addCar-label" for="addCarImg2">Image 2</label>
-                <input type="text" class="form-control" id="addCarImg2" name="addCarImg2" placeholder="Image URL">
+                <input type="text" class="form-control" id="addCarImg2" name="addCarImg2" placeholder="Image URL" required>
                 
                 <label class="addCar-label" for="addCarImg3">Image 3</label>
-                <input type="text" class="form-control" id="addCarImg3" name="addCarImg3" placeholder="Image URL">
+                <input type="text" class="form-control" id="addCarImg3" name="addCarImg3" placeholder="Image URL" required>
                 
                 <label class="addCar-label" for="addCarDescription">Description</label>
-                <textarea class="form-control" id="addCarDescription" name="addCarDescription" rows="3"></textarea>
+                <textarea class="form-control" id="addCarDescription" name="addCarDescription" rows="3" required></textarea>
                 <br>
                 <button name="addCarForm" type="submit" class="btn btn-outline-primary btn-lg btn-block" id="addRecord"><i class="fas fa-plus"></i> Add new vehicle </button>
             </form>

@@ -113,23 +113,23 @@ if (isset($_GET['carId'])) {
             <h2 class="headerText">Update the car</h2>
             <form id="updateForm">
                 <input type="hidden" name="carId" value="<?= $carId['carId'] ?>"/>
-                Model <input class="form-control" type="text" name="model" value="<?= $carId['model'] ?>"/> <br />
-                Maker <input class="form-control" type="text" name="maker" value="<?= $carId['maker'] ?>"/> <br />
-                Price <input class="form-control" type="text" name="price" value="<?= $carId['price'] ?>"/> <br />
-                Description <br><textarea class="form-control" name="description" cols="40" rows="4" /><?= $carId['description'] ?></textarea><br>
-                Color <input class="form-control" type="text" name="color" value="<?= $carId['color'] ?>"/> <br>
-                Weight <input class="form-control" type="text" name="weight" value="<?= $carId['weight'] ?>"/> <br>
-                Year <input class="form-control" type="text" name="year" value="<?= $carId['year'] ?>"/><br>
-                Doors <input class="form-control" type="text" name="doors" value="<?= $carId['doors'] ?>"/><br>
-                fuelType <input class="form-control" type="text" name="fuelType" value="<?= $carId['fuelType'] ?>"/><br>
-                prevOwners <input class="form-control" type="text" name="prevOwners" value="<?= $carId['prevOwners'] ?>"/><br>
-                interColor <input class="form-control" type="text" name="interColor" value="<?= $carId['interColor'] ?>"/><br>
-                Effect <input class="form-control" type="text" name="effect" value="<?= $carId['effect'] ?>"/><br>
+                Model <input class="form-control" type="text" name="model" value="<?= $carId['model'] ?>" required/> <br />
+                Maker <input class="form-control" type="text" name="maker" value="<?= $carId['maker'] ?>" required/> <br />
+                Price <input class="form-control" type="text" name="price" value="<?= $carId['price'] ?>" required/> <br />
+                Description <br><textarea class="form-control" name="description" cols="40" rows="4" required /><?= $carId['description'] ?></textarea><br>
+                Color <input class="form-control" type="text" name="color" value="<?= $carId['color'] ?>" required /> <br>
+                Weight <input class="form-control" type="text" name="weight" value="<?= $carId['weight'] ?>" required /> <br>
+                Year <input class="form-control" type="text" name="year" value="<?= $carId['year'] ?>" required/><br>
+                Doors <input class="form-control" type="text" name="doors" value="<?= $carId['doors'] ?>" required/><br>
+                fuelType <input class="form-control" type="text" name="fuelType" value="<?= $carId['fuelType'] ?>" required/><br>
+                prevOwners <input class="form-control" type="text" name="prevOwners" value="<?= $carId['prevOwners'] ?>" required/><br>
+                interColor <input class="form-control" type="text" name="interColor" value="<?= $carId['interColor'] ?>" required/><br>
+                Effect <input class="form-control" type="text" name="effect" value="<?= $carId['effect'] ?>" required/><br>
                 CylinderVolume <input class="form-control" type="text" name="cylinderVolume" value="<?= $carId['cylinderVolume'] ?>"/><br>
-                Milage: <input class="form-control" type="text" name="milage" value="<?= $carId['milage'] ?>"/><br>
-                Image 1 <input class="form-control" type="url" name="imgURL" value="<?= $carId['imgURL'] ?>"/><br>
-                Image 2 <input class="form-control" type="url" name="imgURL2" value="<?= $carId['imgURL2'] ?>"/><br>
-                Image 3 <input class="form-control" type="url" name="imgURL3" value="<?= $carId['imgURL3'] ?>"/><br>
+                Milage: <input class="form-control" type="text" name="milage" value="<?= $carId['milage'] ?>" required/><br>
+                Image 1 <input class="form-control" type="url" name="imgURL" value="<?= $carId['imgURL'] ?>" required/><br>
+                Image 2 <input class="form-control" type="url" name="imgURL2" value="<?= $carId['imgURL2'] ?>" required/><br>
+                Image 3 <input class="form-control" type="url" name="imgURL3" value="<?= $carId['imgURL3'] ?>" required/><br>
     
     
                 <input type="submit" class="btn btn-outline-primary btn-lg btn-block" id="updateSubmit" name="updateCar" value="Update car"/>
